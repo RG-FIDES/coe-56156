@@ -1,21 +1,21 @@
 {
-  "siteName": "",
-  "siteTitle": "",
-  "initialized": false,
-  "initializedOn": "",
+  "siteName": "coe-56156",
+  "siteTitle": "CoE-56156",
+  "initialized": true,
+  "initializedOn": "2026-10-09",
   "source": {
-    "repoName": "",
-    "repoUrl": "",
-    "localPath": ""
+    "repoName": "coe-56156-dev",
+    "repoUrl": "https://github.com/RG-FIDES/coe-56156-dev",
+    "localPath": "C:\\Users\\andriy.koval\\Documents\\GitHub\\rg-fides\\coe-56156-dev"
   },
   "frontend": {
-    "directory": "",
+    "directory": "_frontend-1",
     "siteSubdirectory": "_site"
   },
   "publish": {
     "artifactDirectory": "_site",
     "entryPoint": "index.html",
-    "landingPage": "index.html",
+    "landingPage": "content/analysis/index/index.html",
     "requiredFiles": [
       "index.html"
     ],

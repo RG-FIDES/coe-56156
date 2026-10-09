@@ -1,0 +1,21 @@
+# Netlify configuration for coe-56156.
+# Optional: this repository's primary host serves the pre-rendered artifact directly.
+# Rendered from templates/netlify.toml by scripts/initialize-site.ps1.
+
+[build]
+  command = "bash ./scripts/netlify-build.sh"
+  publish = "_site"
+
+# Serve the nested landing page at the site root without an external redirect.
+[[redirects]]
+  from = "/"
+  to = "/content/analysis/index/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+

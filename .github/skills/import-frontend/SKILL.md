@@ -1,8 +1,8 @@
 ---
-mode: agent
-description: 'Initialize this site repository from a source project frontend and import its generated site artifact for the first time.'
+name: import-frontend
+description: Initialize this site repository from a source project frontend and import its generated site artifact for the first time.
+disable-model-invocation: true
 ---
-
 # Import a frontend into this site repository
 
 Bind this repository to one frontend of a source project and import that frontend's

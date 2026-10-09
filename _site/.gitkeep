@@ -1,6 +1,0 @@
-This directory holds the generated static-site artifact imported from the source
-project's frontend. Everything here is machine-generated: never edit it by hand.
-
-The placeholder file keeps the directory present in a freshly created repository
-so that the first import has a destination. It may be deleted after the first
-successful import.

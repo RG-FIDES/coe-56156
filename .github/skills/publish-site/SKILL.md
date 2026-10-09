@@ -1,8 +1,8 @@
 ---
-mode: agent
-description: 'Refresh the published site artifact from the configured source project frontend.'
+name: publish-site
+description: Refresh the published site artifact from the configured source project frontend.
+disable-model-invocation: true
 ---
-
 # Publish an updated site
 
 Transfer a newly rendered site artifact from the configured source project frontend
