@@ -72,6 +72,49 @@ everything else is machine-independent.
 
 `{{ARTIFACT_DIRECTORY}}/` is the authoritative artifact for all of them.
 
+### Vercel setup
+
+Vercel serves the committed artifact without rendering or installing dependencies.
+As in `RG-FIDES/maelstrom-site`, there is no `vercel.json` in this repository:
+configure the project in the Vercel dashboard.
+
+| Setting | Value |
+| --- | --- |
+| Git repository | The publishing repository, not the source project |
+| Framework / Application Preset | Other |
+| Root Directory | `./` |
+| Build Command | Enable Override and leave empty |
+| Output Directory | Enable Override and enter `{{ARTIFACT_DIRECTORY}}` |
+| Install Command | Enable Override and leave empty |
+| Production Branch | `main` |
+| Environment Variables | None required |
+
+For a new project, expand **Build and Output Settings** before deploying. For an
+existing project, open **Settings -> Build and Deployment**, save these settings,
+then redeploy the latest `main` deployment. Setting changes do not repair an
+existing deployment until it is redeployed.
+
+Keep Root Directory as `./`; Output Directory is relative to that root. Do not set
+both to `{{ARTIFACT_DIRECTORY}}`, enter `quarto render`, or deploy the source project
+repository. The root URL should resolve through
+`{{ARTIFACT_DIRECTORY}}/{{ENTRY_POINT}}` to the landing page at `/{{LANDING_PAGE}}`.
+
+### Deployment troubleshooting
+
+- **Vercel reports success but `/` returns 404:** if
+  `/{{ARTIFACT_DIRECTORY}}/{{ENTRY_POINT}}` works, the artifact is being served under
+  the wrong URL prefix. Check that Output Directory Override is enabled and set
+  to `{{ARTIFACT_DIRECTORY}}`, then redeploy.
+- **GitHub Pages workflow fails before the first import:** the workflow deliberately
+  fails when `{{ARTIFACT_DIRECTORY}}/` contains no HTML. Import the artifact, commit,
+  and push to `main`; there is no need to remove the check.
+- **GitHub Pages versus Vercel:** the workflow only mirrors the artifact to
+  `gh-pages`. Vercel deploys `main` independently. Enable GitHub Pages separately
+  under **Settings -> Pages -> Deploy from a branch -> gh-pages / root** only if
+  you want a second public URL.
+- **Netlify configuration:** Vercel ignores `netlify.toml`; it is not a substitute
+  for the Vercel dashboard settings.
+
 ## License
 
 See [LICENSE](LICENSE).
