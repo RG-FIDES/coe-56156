@@ -1,0 +1,20 @@
+# Netlify configuration for {{SITE_NAME}}.
+# Optional: this repository's primary host serves the pre-rendered artifact directly.
+# Rendered from templates/netlify.toml by scripts/initialize-site.ps1.
+
+[build]
+  command = "bash ./scripts/netlify-build.sh"
+  publish = "{{ARTIFACT_DIRECTORY}}"
+
+# Serve the nested landing page at the site root without an external redirect.
+[[redirects]]
+  from = "/"
+  to = "/{{LANDING_PAGE}}"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

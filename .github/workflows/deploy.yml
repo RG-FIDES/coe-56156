@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+# Mirrors the committed site artifact to the `gh-pages` branch.
+# Nothing is built here: the artifact is rendered in the source project and
+# imported into `_site/` by scripts/sync-site.ps1.
+#
+# GitHub Pages must be enabled in repository settings
+# (Settings -> Pages -> Source: Deploy from a branch -> gh-pages / root)
+# for this mirror to be served publicly.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_site/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify artifact is present
+        run: |
+          if [ ! -d _site ] || [ -z "$(find _site -type f -name '*.html' -print -quit)" ]; then
+            echo "::error::_site is missing or contains no HTML. Import the artifact before deploying."
+            exit 1
+          fi
+
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site

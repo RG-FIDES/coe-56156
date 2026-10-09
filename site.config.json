@@ -1,0 +1,66 @@
+{
+  "siteName": "",
+  "siteTitle": "",
+  "initialized": false,
+  "initializedOn": "",
+  "source": {
+    "repoName": "",
+    "repoUrl": "",
+    "localPath": ""
+  },
+  "frontend": {
+    "directory": "",
+    "siteSubdirectory": "_site"
+  },
+  "publish": {
+    "artifactDirectory": "_site",
+    "entryPoint": "index.html",
+    "landingPage": "index.html",
+    "requiredFiles": [
+      "index.html"
+    ],
+    "forbiddenExtensions": [
+      ".R",
+      ".r",
+      ".Rmd",
+      ".rds",
+      ".RData",
+      ".qmd",
+      ".ipynb",
+      ".py",
+      ".sav",
+      ".sas7bdat",
+      ".dta",
+      ".parquet",
+      ".sqlite",
+      ".sqlite3",
+      ".db",
+      ".accdb",
+      ".mdb",
+      ".env",
+      ".pem",
+      ".key"
+    ],
+    "forbiddenPathSegments": [
+      ".git",
+      ".quarto",
+      ".Rproj.user",
+      "_cache",
+      "_freeze",
+      "data-private",
+      "data-restricted",
+      "secrets"
+    ],
+    "sensitiveTextPatterns": [
+      "data-private"
+    ],
+    "preservedPaths": [
+      ".gitkeep"
+    ]
+  },
+  "hosts": {
+    "primary": "vercel",
+    "githubPages": true,
+    "netlify": false
+  }
+}

@@ -1,0 +1,28 @@
+# The published artifact IS tracked. Do not ignore it.
+
+# Renderer caches must never appear here.
+.quarto/
+_freeze/
+_cache/
+.Rproj.user/
+__pycache__/
+
+# Never publishable.
+data-private/
+*.sav
+*.sas7bdat
+*.dta
+*.parquet
+*.sqlite
+*.sqlite3
+*.db
+.env
+.env.*
+*.pem
+*.key
+
+# Local tooling noise.
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
