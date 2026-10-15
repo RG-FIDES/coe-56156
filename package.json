@@ -1,0 +1,20 @@
+{
+  "name": "coe-56156",
+  "version": "1.0.0",
+  "description": "Public website repository for CoE-56156 with Vercel Web Analytics",
+  "private": true,
+  "scripts": {
+    "verify": "echo 'Static site - no build required. Analytics loaded via CDN.'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "vercel",
+    "analytics",
+    "static-site"
+  ],
+  "author": "RG-FIDES",
+  "license": "SEE LICENSE IN LICENSE"
+}
