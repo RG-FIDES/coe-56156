@@ -81,10 +81,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../../content/analysis/responsibilities/responsibilities.html" rel="" target="">
  <span class="menu-text">Responsibilities</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../content/analysis/worklife/worklife.html" rel="" target="">
- <span class="menu-text">WorkLife</span></a>
-  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-docs" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Docs</span>
@@ -101,10 +97,6 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../../../content/analysis/bibliography/bibliography.html" rel="" target="">
  <span class="dropdown-text">Bibliography</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../../content/analysis/illustrations/illustrations.html" rel="" target="">
- <span class="dropdown-text">Illustrations</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../content/analysis/coe-dsr-team/coe-dsr-team.html" rel="" target="">
@@ -157,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><strong>Education.</strong> PhD in Quantitative Methods (2014), MA in Quantitative Psychology (2008), and BS in Journalism (2005). More in my <a href="../cv/cv.html">CV</a>.</p>
-<p><strong>Experience.</strong> Over the past ten years, my work has combined applied statistics, research, and data science: <a href="https://cihr-irsc.gc.ca/e/50685.html">IALSA research at the University of Victoria</a>, a <a href="https://cihr-irsc.gc.ca/e/50685.html">CIHR Health System Impact Fellowship at UBC</a>, <a href="https://vada.cs.umanitoba.ca/profiles/andriy-koval/">clinical research at Island Health</a>, and an <a href="https://www.ucf.edu/news/new-project-will-explore-telehealth-effectiveness-on-veterans-during-pandemic/">assistant professorship in Health Management and Informatics at the University of Central Florida</a>. For the past five years, I’ve worked with the Government of Alberta on <a href="../projects/projects.html#work-fiesta">service impact evaluation</a> and <a href="../projects/projects.html#work-rdb">research data infrastructure</a>. During the last year I explored modernizing our <a href="../projects/projects.html#work-forecast">forecasting capacities</a> in preparation for cloud deployment. My <a href="../projects/projects.html#work-template">agent-assisted project template</a> provides the blueprint for any recent analytical work.</p>
+<p><strong>Experience.</strong> Over the past ten years, my work has combined applied statistics, research, and data science: <a href="https://dss-ialh.rbind.io/">IALSA research at the University of Victoria</a>, a <a href="https://cihr-irsc.gc.ca/e/50685.html">CIHR Health System Impact Fellowship at UBC</a>, <a href="https://vada.cs.umanitoba.ca/profiles/andriy-koval/">clinical research at Island Health</a>, and an <a href="https://www.ucf.edu/news/new-project-will-explore-telehealth-effectiveness-on-veterans-during-pandemic/">assistant professorship in Health Management and Informatics at the University of Central Florida</a>. For the past five years, I’ve worked with the Government of Alberta on <a href="../projects/projects.html#work-fiesta">service impact evaluation</a> and <a href="../projects/projects.html#work-rdb">research data infrastructure</a>. During the last year I explored modernizing our <a href="../projects/projects.html#work-forecast">forecasting capacities</a> in preparation for cloud deployment. My <a href="../projects/projects.html#work-template">agent-assisted project template</a> provides the blueprint for any recent analytical work.</p>
 <p><strong>PMP.</strong> I took project-management training during my CIHR fellowship and am ready and willing to obtain the PMP designation within the first 12 months. I don’t currently hold the designation; my <a href="../projects/projects.html#work-fiesta">project leadership experience</a> gives me a practical foundation for the formal certification.</p>
 
 
@@ -262,6 +254,30 @@ ul.task-list li input[type="checkbox"] {
   s.onload = wire;
   s.onerror = function () { /* map missing: links keep their written hrefs */ };
   document.body.appendChild(s);
+})();
+</script>
+<!--
+  Shared through _quarto.yml so every render embeds analytics in the site.
+  Enable Web Analytics in Vercel before the next approved deployment.
+  Plain-HTML integration: https://vercel.com/docs/analytics/quickstart
+  Only the production origin may load the script; previews remain untracked.
+-->
+<script>
+(function () {
+  "use strict";
+
+  if (window.location.origin !== "https://coe-56156.vercel.app") {
+    return;
+  }
+
+  window.va = window.va || function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+
+  var script = document.createElement("script");
+  script.defer = true;
+  script.src = "/_vercel/insights/script.js";
+  document.head.appendChild(script);
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

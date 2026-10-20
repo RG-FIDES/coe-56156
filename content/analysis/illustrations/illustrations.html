@@ -81,10 +81,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../../content/analysis/responsibilities/responsibilities.html" rel="" target="">
  <span class="menu-text">Responsibilities</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../content/analysis/worklife/worklife.html" rel="" target="">
- <span class="menu-text">WorkLife</span></a>
-  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-docs" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Docs</span>
@@ -101,10 +97,6 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../../../content/analysis/bibliography/bibliography.html" rel="" target="">
  <span class="dropdown-text">Bibliography</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../../content/analysis/illustrations/illustrations.html" rel="" target="">
- <span class="dropdown-text">Illustrations</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../content/analysis/coe-dsr-team/coe-dsr-team.html" rel="" target="">
@@ -340,6 +332,30 @@ ul.task-list li input[type="checkbox"] {
   s.onload = wire;
   s.onerror = function () { /* map missing: links keep their written hrefs */ };
   document.body.appendChild(s);
+})();
+</script>
+<!--
+  Shared through _quarto.yml so every render embeds analytics in the site.
+  Enable Web Analytics in Vercel before the next approved deployment.
+  Plain-HTML integration: https://vercel.com/docs/analytics/quickstart
+  Only the production origin may load the script; previews remain untracked.
+-->
+<script>
+(function () {
+  "use strict";
+
+  if (window.location.origin !== "https://coe-56156.vercel.app") {
+    return;
+  }
+
+  window.va = window.va || function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+
+  var script = document.createElement("script");
+  script.defer = true;
+  script.src = "/_vercel/insights/script.js";
+  document.head.appendChild(script);
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

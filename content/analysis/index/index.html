@@ -81,10 +81,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../../content/analysis/responsibilities/responsibilities.html" rel="" target="">
  <span class="menu-text">Responsibilities</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../content/analysis/worklife/worklife.html" rel="" target="">
- <span class="menu-text">WorkLife</span></a>
-  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-docs" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Docs</span>
@@ -101,10 +97,6 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../../../content/analysis/bibliography/bibliography.html" rel="" target="">
  <span class="dropdown-text">Bibliography</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../../content/analysis/illustrations/illustrations.html" rel="" target="">
- <span class="dropdown-text">Illustrations</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../content/analysis/coe-dsr-team/coe-dsr-team.html" rel="" target="">
@@ -160,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 <p>If you are looking for ways to elevate the work of your data scientists through the integration of AI into advanced analytic practices, my work and experience might be relevant to your vision of growth.</p>
 <p>There are many ways into Data Science. I came from statistics for social sciences, picking up tech along the way. From psych to health, I framed my work around studying <em>populations</em>, understanding groups of people using the data they generate. I still think in this way. After I started with the Government of Alberta in 2021, I built practices for <em>research data warehousing</em> and <em>reproducible reporting</em> to support the study of social programs and their recipients. But around 2025 I stopped perceiving my role as the writer of code, instead, I began seeing myself as the <em>orchestrator</em> of processes. In <em>my</em> flavour of data science, the big three are: engineering, visualizing, and publishing.</p>
 <p>The <a href="https://github.com/GovAlta/quick-start-template">template</a> for reproducible research projects I developed and maintained for GoA since 2023 was expanded to include tools for context engineering and agent specialization. I started with a simple <a href="https://github.com/GovAlta/quick-start-template/tree/main/ai">AI Support System</a> that steered the agent via streamlined customization of the system prompt. Over time it evolved into a more intentional and specific <em>agent harness for scientific reporting</em> that <a href="https://github.com/GovAlta/quick-start-template/tree/main/philosophy">organized human-AI collaboration</a> in three key processes of data science: data engineering, modeling, and frontend publishing. To get a better feel for how it works and what it makes, consider my <a href="https://absent-from-chronic-site.vercel.app/">Absent from Chronic</a> project.</p>
-<p>Substantivly, it seeks to understand the role of chronic conditions in work absenteeism using the data from the Canadian Community Health Survey (<a href="https://absent-from-chronic-site.vercel.app/content/docs/project-overview/slides.html#/title-slide">AfC project overview</a>). Technically, I aimed to demonstrate the utility of my AI harness in solving practical problems in applied analytics. You can examine the codebase in this <a href="https://github.com/RG-FIDES/absent-from-chronic">repo</a>, while my recent talks offer a high-level summary of the harness design (<a href="https://absent-from-chronic-site.vercel.app/content/docs/minding-the-agents/slides.html#/title-slide">Minding the Agents</a>) and a few thoughts on collaboration in data science (<a href="https://absent-from-chronic-site.vercel.app/content/docs/ai4-ds-teams/slides.html#/title-slide">AI for Data Science Teams</a>), both featuring this reproducible project.</p>
+<p>Substantively, it seeks to understand the role of chronic conditions in work absenteeism using the data from the Canadian Community Health Survey (<a href="https://absent-from-chronic-site.vercel.app/content/docs/project-overview/slides.html#/title-slide">AfC project overview</a>). Technically, I aimed to demonstrate the utility of my AI harness in solving practical problems in applied analytics. You can examine the codebase in this <a href="https://github.com/RG-FIDES/absent-from-chronic">repo</a>, while my recent talks offer a high-level summary of the harness design (<a href="https://absent-from-chronic-site.vercel.app/content/docs/minding-the-agents/slides.html#/title-slide">Minding the Agents</a>) and a few thoughts on collaboration in data science (<a href="https://absent-from-chronic-site.vercel.app/content/docs/ai4-ds-teams/slides.html#/title-slide">AI for Data Science Teams</a>), both featuring this reproducible project.</p>
 <p><strong>Why your team</strong>. AI is not a magic bullet, it needs well-defined problems and willing stakeholders to bring about operational impact. Your internal consultancy gets it and puts it into practice. I want to measure my career by making cool things that benefit people: the Corporation lacks neither diversity nor volume of problems to tackle and your team seems to be having fun solving them. I will be delighted to explore how our partnership can benefit the people who call Edmonton home.</p>
 
 
@@ -265,6 +257,30 @@ ul.task-list li input[type="checkbox"] {
   s.onload = wire;
   s.onerror = function () { /* map missing: links keep their written hrefs */ };
   document.body.appendChild(s);
+})();
+</script>
+<!--
+  Shared through _quarto.yml so every render embeds analytics in the site.
+  Enable Web Analytics in Vercel before the next approved deployment.
+  Plain-HTML integration: https://vercel.com/docs/analytics/quickstart
+  Only the production origin may load the script; previews remain untracked.
+-->
+<script>
+(function () {
+  "use strict";
+
+  if (window.location.origin !== "https://coe-56156.vercel.app") {
+    return;
+  }
+
+  window.va = window.va || function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+
+  var script = document.createElement("script");
+  script.defer = true;
+  script.src = "/_vercel/insights/script.js";
+  document.head.appendChild(script);
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
